@@ -1,32 +1,19 @@
 {
-  "pdf_filename": "trade_republic.pdf",
-  "currency_symbol": "€",
-  "show_preview": false,
-  "extract_last_page": false,
-  "dpi": 200,
-  "resize_px": [595, 841.88],
-  "columns": [
-    "DATA",
-    "TIPO", 
-    "DESCRIZIONE",
-    "IN ENTRATA",
-    "IN USCITA",
-    "SALDO"
-  ],
-  "valid_types": [
-    "Transazione con carta",
-    "Bonifico SEPA istantaneo", 
-    "Commercio",
-    "Commissione"
-  ],
-  "header_alignment_map": {
-    "DATA": "left",
-    "TIPO": "left", 
-    "DESCRIZIONE": "left",
-    "IN ENTRATA": "left",
-    "IN USCITA": "left",
-    "SALDO": "right"
+  "input_dir": "input",
+  "output_dir": "output",
+  "image": {
+    "dpi": 300,
+    "brightness": 1.5,
+    "contrast": 1.5,
+    "scale": 0.5
   },
-  "area_first": [343, 42, 770, 552],
-  "area_default": [55, 42, 770, 552]
+  "parser": {
+    "model": "ministral-3:8b",
+    "ollama_url": "http://localhost:11434",
+    "temperature": 0.01
+  },
+  "output_format": "csv",
+  "max_response_chars": 8000,
+  "max_tokens": 8000,
+  "save_page_images": true
 }

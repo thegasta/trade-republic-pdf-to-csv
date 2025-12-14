@@ -1,0 +1,10 @@
+Return only:
+{"rows":[ ... ]}
+
+Rules:
+- Use the table’s own column headers (original language); normalize keys to lowercase and keep the exact header order. Do not invent or duplicate columns; only one running balance column.
+- Do NOT create variations of headers (e.g., keep "in entrata" exactly—do not add a separate "entrata"). If you cannot read a header, omit that column instead of inventing one.
+- Keep text in the document language. Do not split or merge a single transaction; multi-line rows stay one row. Fill numeric fields when present; don’t leave amount/balance cells empty.
+- All rows go in one array (no trades/transactions split); skip rows you would be duplicating yourself.
+- Skip summaries/overviews: account/balance overviews; tables that combine product/account with opening and closing balances; market-value/liquidity/portfolio blocks (e.g., ISIN + units/shares + price per unit + market value; cash/liquidity overviews).
+- Output ONLY the JSON object above—no prose, no markdown, no extra text. Use null for missing values.

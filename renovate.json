@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+
+  "enabledManagers": ["pip_requirements"],
+  "pip_requirements": {
+    "fileMatch": ["(^|/)requirements\\.txt$"]
+  },
+
+  "timezone": "Europe/Rome",
+  "labels": ["dependencies"],
+
+  "packageRules": [
+    {
+      "matchManagers": ["pip_requirements"],
+      "groupName": "python dependencies"
+    }
+  ],
+
+  "prHourlyLimit": 4,
+  "prConcurrentLimit": 10,
+  "dependencyDashboard": false
+}

@@ -1,21 +1,14 @@
 __pycache__/
 .venv/
+venv/
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
 .DS_Store
 
 input
 output
 settings.json
-
-README.it.md
-
-web-ui/python-api/main.py
-web-ui/python-api/requirements.txt
+*AGENTS*
 
 # Nuxt dev/build outputs
 .output
@@ -27,3 +20,4 @@ dist
 
 # Node dependencies
 node_modules
+web-ui
